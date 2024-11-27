@@ -1010,14 +1010,21 @@
 /obj/floor_decal/corner/green{
 	dir = 10
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
+	},
 /turf/simulated/floor/tiled/monotile,
 /area/exploration_shuttle/crew)
 "ca" = (
-/obj/machinery/atmospherics/unary/vent_pump/on{
-	dir = 8
-	},
 /obj/structure/bed/chair/shuttle/blue{
 	dir = 1
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 8
 	},
 /obj/machinery/firealarm{
 	dir = 1;
@@ -1029,6 +1036,9 @@
 /obj/machinery/computer/ship/navigation/telescreen{
 	pixel_y = -32
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/exploration_shuttle/crew)
 "cc" = (
@@ -1036,6 +1046,9 @@
 	dir = 1;
 	pixel_y = -22;
 	req_access = list("ACCESS_TORCH_CREW")
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/exploration_shuttle/crew)
@@ -1123,6 +1136,9 @@
 	dir = 8;
 	icon_state = "console"
 	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/monotile,
 /area/exploration_shuttle/crew)
 "cm" = (
@@ -1139,6 +1155,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/door/firedoor,
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/steel_ridged,
 /area/exploration_shuttle/crew)
 "cq" = (
@@ -1269,6 +1286,7 @@
 	d2 = 8;
 	icon_state = "2-8"
 	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/monotile,
 /area/exploration_shuttle/cargo)
 "cF" = (
@@ -1312,9 +1330,9 @@
 /obj/machinery/light/spot{
 	dir = 1
 	},
-/obj/structure/table/steel,
-/obj/item/device/drone_designator{
-	network = "torch_transport"
+/obj/machinery/conveyor_switch/oneway{
+	id = "cargobay";
+	name = "mining conveyor"
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/exploration_shuttle/cargo)
@@ -1324,28 +1342,29 @@
 	name = "Protective Shutters Control";
 	pixel_y = 25
 	},
-/obj/structure/handrail,
+/obj/machinery/conveyor{
+	id = "cargobay";
+	dir = 4
+	},
 /turf/simulated/floor/tiled/monotile,
 /area/exploration_shuttle/cargo)
 "cL" = (
-/obj/machinery/conveyor_switch/oneway{
-	id = "cargobay";
-	name = "mining conveyor"
-	},
 /obj/machinery/alarm{
 	pixel_y = 24;
 	req_access = list("ACCESS_TORCH_CREW")
 	},
+/obj/machinery/conveyor{
+	id = "cargobay";
+	dir = 4
+	},
 /turf/simulated/floor/tiled/monotile,
 /area/exploration_shuttle/cargo)
 "cM" = (
-/obj/floor_decal/industrial/warning{
+/obj/machinery/disposal/deliveryChute{
 	dir = 8
 	},
-/obj/machinery/conveyor{
-	id = "cargobay"
-	},
-/turf/simulated/floor/tiled/techfloor/grid,
+/obj/structure/disposalpipe/trunk,
+/turf/simulated/floor/tiled/monotile,
 /area/exploration_shuttle/cargo)
 "cN" = (
 /obj/wallframe_spawn/reinforced/titanium,
@@ -1361,6 +1380,7 @@
 /turf/simulated/floor/plating,
 /area/exploration_shuttle/cargo)
 "cO" = (
+/obj/machinery/recharge_station,
 /turf/simulated/floor/tiled/monotile,
 /area/exploration_shuttle/medical)
 "cP" = (
@@ -1489,23 +1509,33 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 4
 	},
-/obj/floor_decal/industrial/warning/corner,
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
 /turf/simulated/floor/tiled,
 /area/exploration_shuttle/cargo)
 "dd" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
 	},
-/obj/floor_decal/industrial/warning,
-/turf/simulated/floor/tiled,
+/obj/floor_decal/industrial/warning/corner,
+/turf/simulated/floor/tiled/monotile,
 /area/exploration_shuttle/cargo)
 "de" = (
 /obj/floor_decal/industrial/warning,
+/obj/structure/disposalpipe/segment{
+	dir = 8;
+	icon_state = "pipe-c"
+	},
 /turf/simulated/floor/tiled/monotile,
 /area/exploration_shuttle/cargo)
 "df" = (
 /obj/floor_decal/industrial/warning,
-/obj/floor_decal/industrial/loading{
+/obj/structure/disposalpipe/segment{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/monotile,
@@ -1596,9 +1626,6 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 4
 	},
-/obj/floor_decal/industrial/warning{
-	dir = 4
-	},
 /turf/simulated/floor/tiled,
 /area/exploration_shuttle/cargo)
 "dm" = (
@@ -1646,6 +1673,7 @@
 /obj/floor_decal/techfloor{
 	dir = 1
 	},
+/turf/simulated/floor/tiled/monotile,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/exploration_shuttle/cargo)
 "dw" = (
@@ -1697,17 +1725,13 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/floor_decal/industrial/warning{
-	dir = 4
-	},
 /turf/simulated/floor/tiled,
 /area/exploration_shuttle/cargo)
 "dD" = (
-/obj/floor_decal/techfloor{
-	dir = 8
+/obj/floor_decal/industrial/warning{
+	dir = 4
 	},
-/obj/floor_decal/industrial/outline/yellow,
-/turf/simulated/floor/tiled/techfloor/grid,
+/turf/simulated/floor/tiled/monotile,
 /area/exploration_shuttle/cargo)
 "dE" = (
 /obj/structure/cable/green{
@@ -1756,21 +1780,25 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/exploration_shuttle/cargo)
 "dK" = (
+/obj/wallframe_spawn/reinforced/titanium,
+/obj/machinery/door/blast/regular/open{
+	density = 0;
+	dir = 4;
+	icon_state = "pdoor0";
+	id_tag = "charon_shutters";
+	name = "Protective Shutters";
+	opacity = 0
+	},
+/obj/paint/hull,
+/obj/paint/hull,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/exploration_shuttle/crew)
+"dL" = (
 /obj/floor_decal/techfloor{
 	dir = 4
-	},
-/obj/floor_decal/industrial/outline/yellow,
-/turf/simulated/floor/tiled/techfloor/grid,
-/area/exploration_shuttle/cargo)
-"dL" = (
-/obj/machinery/disposal/deliveryChute{
-	dir = 1
-	},
-/obj/structure/disposalpipe/trunk{
-	dir = 4
-	},
-/obj/floor_decal/industrial/warning{
-	dir = 8
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/exploration_shuttle/cargo)
@@ -1881,29 +1909,16 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 4
 	},
-/obj/floor_decal/industrial/warning{
-	dir = 4
-	},
 /turf/simulated/floor/tiled/monotile,
 /area/exploration_shuttle/cargo)
 "ea" = (
-/obj/floor_decal/techfloor{
-	dir = 10
+/obj/floor_decal/industrial/warning{
+	dir = 4
 	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
 	},
-/obj/structure/handrail{
-	dir = 1
-	},
-/obj/floor_decal/industrial/outline/yellow,
-/turf/simulated/floor/tiled/techfloor/grid,
-/area/exploration_shuttle/cargo)
-"eb" = (
-/obj/floor_decal/techfloor,
-/obj/floor_decal/industrial/outline/yellow,
-/obj/machinery/light/spot,
-/turf/simulated/floor/tiled/techfloor/grid,
+/turf/simulated/floor/tiled/monotile,
 /area/exploration_shuttle/cargo)
 "ec" = (
 /obj/structure/cable/cyan{
@@ -1918,10 +1933,8 @@
 /turf/simulated/floor/plating,
 /area/maintenance/fifthdeck/aftstarboard)
 "ed" = (
-/obj/floor_decal/techfloor,
-/obj/floor_decal/techfloor,
 /obj/floor_decal/industrial/outline/yellow,
-/obj/structure/closet/firecloset,
+/turf/simulated/floor/tiled/monotile,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/exploration_shuttle/cargo)
 "ee" = (
@@ -1937,20 +1950,7 @@
 	},
 /turf/simulated/floor/plating,
 /area/guppy_hangar/start)
-"eg" = (
-/obj/floor_decal/techfloor{
-	dir = 6
-	},
-/obj/floor_decal/industrial/outline/yellow,
-/obj/machinery/floodlight,
-/turf/simulated/floor/tiled/techfloor/grid,
-/area/exploration_shuttle/cargo)
 "eh" = (
-/obj/paint/hull,
-/turf/simulated/wall/titanium,
-/area/exploration_shuttle/cargo)
-"ei" = (
-/obj/structure/disposalpipe/segment,
 /obj/paint/hull,
 /turf/simulated/wall/titanium,
 /area/exploration_shuttle/cargo)
@@ -1958,7 +1958,6 @@
 /obj/machinery/oxygen_pump{
 	pixel_y = 32
 	},
-/obj/structure/handrail,
 /obj/floor_decal/industrial/warning{
 	dir = 8;
 	icon_state = "warning"
@@ -1982,13 +1981,14 @@
 /turf/simulated/floor/tiled/steel_ridged,
 /area/exploration_shuttle/cargo)
 "en" = (
-/obj/structure/disposalpipe/trunk{
-	dir = 1
+/obj/catwalk_plated,
+/obj/structure/cable/cyan{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
 	},
-/obj/structure/disposaloutlet,
-/obj/floor_decal/industrial/warning/fulltile,
-/turf/simulated/floor/tiled/monotile,
-/area/exploration_shuttle/cargo)
+/turf/simulated/floor/plating,
+/area/quartermaster/hangar)
 "eo" = (
 /obj/machinery/atmospherics/portables_connector{
 	dir = 1
@@ -2001,9 +2001,6 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/fifthdeck/aftstarboard)
 "eq" = (
-/obj/machinery/atmospherics/unary/vent_pump/high_volume/shuttle{
-	id_tag = "charon_shuttle_pump_out_external"
-	},
 /obj/floor_decal/industrial/warning{
 	dir = 8;
 	icon_state = "warning"
@@ -2013,6 +2010,9 @@
 	master_tag = "charon_shuttle";
 	pixel_x = 20;
 	pixel_y = 20
+	},
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/shuttle{
+	id_tag = "charon_shuttle_pump_out_external"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/exploration_shuttle/airlock)
@@ -2056,6 +2056,11 @@
 /obj/machinery/firealarm{
 	dir = 8;
 	pixel_x = -24
+	},
+/obj/structure/cable/cyan{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
 	},
 /turf/simulated/floor/plating,
 /area/quartermaster/hangar)
@@ -2118,42 +2123,28 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/structure/handrail{
-	dir = 8
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/power/apc/shuttle/charon{
-	dir = 4
-	},
-/obj/structure/cable/cyan,
 /turf/simulated/floor/tiled/monotile,
 /area/exploration_shuttle/airlock)
 "eE" = (
-/obj/paint/hull,
-/turf/simulated/wall/titanium,
-/area/exploration_shuttle/airlock)
-"eF" = (
-/obj/machinery/atmospherics/unary/vent_scrubber/on,
-/obj/structure/table/steel_reinforced,
-/obj/machinery/power/apc/shuttle/charon{
+/obj/floor_decal/industrial/warning{
 	dir = 1;
-	name = "north bump";
-	pixel_y = 24
+	icon_state = "warning"
 	},
 /obj/structure/cable/cyan{
+	d1 = 1;
 	d2 = 2;
-	icon_state = "0-2"
+	icon_state = "1-2"
 	},
-/obj/random_multi/single_item/boombox,
-/obj/machinery/cell_charger,
-/obj/machinery/light_switch{
-	dir = 4;
-	pixel_x = -22;
-	pixel_y = -10
+/turf/simulated/floor/tiled/monotile,
+/area/quartermaster/hangar)
+"eF" = (
+/obj/floor_decal/techfloor{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/exploration_shuttle/power)
+/area/exploration_shuttle/cargo)
 "eH" = (
 /obj/floor_decal/industrial/warning/corner{
 	dir = 8
@@ -2161,21 +2152,15 @@
 /turf/simulated/floor/tiled/monotile,
 /area/quartermaster/hangar)
 "eK" = (
-/obj/structure/cable/cyan{
-	d1 = 2;
-	d2 = 4;
-	icon_state = "2-4"
+/obj/floor_decal/industrial/warning/fulltile,
+/obj/structure/disposaloutlet{
+	dir = 4
 	},
-/obj/floor_decal/industrial/warning{
-	dir = 4;
-	icon_state = "warning"
+/obj/structure/disposalpipe/trunk{
+	dir = 8
 	},
-/obj/machinery/firealarm{
-	pixel_y = 24
-	},
-/obj/machinery/radio_beacon,
-/turf/simulated/floor/tiled/techfloor/grid,
-/area/exploration_shuttle/power)
+/turf/simulated/floor/tiled/monotile,
+/area/exploration_shuttle/crew)
 "eM" = (
 /obj/floor_decal/industrial/warning/corner{
 	dir = 4;
@@ -2193,17 +2178,6 @@
 /obj/structure/railing/mapped,
 /turf/simulated/floor/plating,
 /area/maintenance/fifthdeck/fore)
-"eQ" = (
-/obj/machinery/power/smes/buildable/preset/torch/shuttle{
-	RCon_tag = "Shuttle - Charon"
-	},
-/obj/floor_decal/industrial/hatch/yellow,
-/obj/structure/cable/cyan{
-	d2 = 8;
-	icon_state = "0-8"
-	},
-/turf/simulated/floor/tiled/techfloor/grid,
-/area/exploration_shuttle/power)
 "eS" = (
 /obj/floor_decal/industrial/warning{
 	dir = 4;
@@ -2240,22 +2214,28 @@
 /turf/simulated/floor/lino,
 /area/shuttle/petrov/rd)
 "eX" = (
-/obj/wallframe_spawn/reinforced/titanium,
-/obj/machinery/door/blast/regular/open{
-	density = 0;
-	dir = 4;
-	icon_state = "pdoor0";
-	id_tag = "charon_shutters";
-	name = "Protective Shutters";
-	opacity = 0
+/obj/floor_decal/techfloor{
+	dir = 6
 	},
-/obj/paint/hull,
-/turf/simulated/floor/plating,
-/area/exploration_shuttle/power)
+/obj/machinery/light,
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/exploration_shuttle/cargo)
 "eY" = (
-/obj/floor_decal/industrial/warning/fulltile,
-/turf/simulated/floor/tiled/monotile,
-/area/exploration_shuttle/power)
+/obj/machinery/atmospherics/pipe/manifold/hidden,
+/obj/machinery/shield_diffuser,
+/obj/machinery/door/airlock/external{
+	autoset_access = 0;
+	frequency = 1331;
+	id_tag = "charon_cargo_outer";
+	name = "Charon External Access"
+	},
+/obj/structure/cable/cyan{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled/steel_ridged,
+/area/exploration_shuttle/airlock)
 "eZ" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden{
 	dir = 8
@@ -2342,91 +2322,50 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/machinery/atmospherics/pipe/manifold4w/hidden/supply,
-/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
-	dir = 8
-	},
-/obj/structure/cable/cyan{
-	d1 = 2;
-	d2 = 4;
-	icon_state = "2-4"
-	},
 /obj/floor_decal/corner/yellow{
 	dir = 6
 	},
-/obj/machinery/access_button/airlock_interior{
-	frequency = 1331;
-	master_tag = "charon_shuttle";
-	pixel_x = 21;
-	pixel_y = 21
-	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled,
 /area/exploration_shuttle/airlock)
 "fo" = (
-/obj/machinery/door/airlock/hatch,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/machinery/door/firedoor,
-/turf/simulated/floor/tiled/steel_ridged,
-/area/exploration_shuttle/airlock)
-"fp" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 10
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 9
-	},
-/obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 4;
-	icon_state = "1-4"
-	},
-/turf/simulated/floor/tiled/techfloor/grid,
-/area/exploration_shuttle/power)
-"fq" = (
-/obj/floor_decal/industrial/warning/corner{
-	dir = 4
-	},
+/obj/catwalk_plated,
 /obj/structure/cable/cyan{
 	d1 = 1;
 	d2 = 8;
 	icon_state = "1-8"
 	},
+/turf/simulated/floor/plating,
+/area/quartermaster/hangar)
+"fp" = (
+/obj/floor_decal/techfloor{
+	dir = 4
+	},
+/obj/structure/handrail{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/exploration_shuttle/power)
+/area/exploration_shuttle/cargo)
 "fr" = (
-/obj/machinery/power/terminal{
-	dir = 1
+/obj/floor_decal/techfloor{
+	dir = 8
 	},
-/obj/structure/cable/cyan{
-	d2 = 4;
-	icon_state = "0-4"
-	},
-/obj/floor_decal/industrial/warning{
-	dir = 1;
-	icon_state = "warning"
-	},
-/obj/structure/cable/yellow{
-	d2 = 2;
-	icon_state = "0-2"
+/obj/structure/handrail{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/exploration_shuttle/power)
+/area/exploration_shuttle/cargo)
 "fu" = (
+/obj/floor_decal/techfloor{
+	dir = 4
+	},
+/obj/machinery/light/spot{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/exploration_shuttle/cargo)
+"fx" = (
 /obj/wallframe_spawn/reinforced/titanium,
 /obj/structure/cable/cyan{
 	d1 = 4;
@@ -2443,27 +2382,7 @@
 	},
 /obj/paint/hull,
 /turf/simulated/floor/plating,
-/area/exploration_shuttle/power)
-"fx" = (
-/obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/floor_decal/industrial/warning/fulltile,
-/turf/simulated/floor/tiled/monotile,
-/area/exploration_shuttle/power)
-"fy" = (
-/obj/floor_decal/industrial/warning{
-	dir = 8
-	},
-/obj/structure/cable/cyan{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/tiled/monotile,
-/area/quartermaster/hangar)
+/area/exploration_shuttle/cargo)
 "fz" = (
 /turf/simulated/wall/walnut,
 /area/vacant/bar)
@@ -2595,46 +2514,39 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/structure/handrail{
-	dir = 8
-	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/firealarm{
-	dir = 4;
-	pixel_x = 26
-	},
 /turf/simulated/floor/tiled,
 /area/exploration_shuttle/airlock)
 "fO" = (
-/obj/machinery/atmospherics/unary/vent_pump/on{
-	dir = 1;
-	level = 2
+/obj/floor_decal/techfloor{
+	dir = 10
 	},
 /obj/machinery/light,
-/obj/machinery/alarm{
-	dir = 4;
-	pixel_x = -21;
-	req_access = list("ACCESS_TORCH_CREW")
-	},
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/exploration_shuttle/power)
+/area/exploration_shuttle/cargo)
 "fP" = (
-/obj/machinery/recharge_station,
-/obj/floor_decal/industrial/outline/yellow,
-/turf/simulated/floor/tiled/techfloor/grid,
-/area/exploration_shuttle/power)
-"fQ" = (
-/obj/machinery/power/port_gen/pacman{
-	anchored = 1
+/obj/floor_decal/techfloor,
+/obj/structure/handrail{
+	dir = 1
 	},
-/obj/floor_decal/industrial/hatch/yellow,
-/obj/structure/cable/yellow,
-/obj/item/stack/material/phoron/ten,
+/turf/simulated/floor/tiled/monotile,
 /turf/simulated/floor/tiled/techfloor/grid,
-/area/exploration_shuttle/power)
+/area/exploration_shuttle/cargo)
+"fQ" = (
+/obj/catwalk_plated,
+/obj/floor_decal/industrial/warning{
+	dir = 8
+	},
+/obj/structure/cable/cyan{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/plating,
+/area/quartermaster/hangar)
 "fR" = (
 /obj/structure/handrail{
 	dir = 1
@@ -2740,15 +2652,17 @@
 /obj/paint/hull,
 /turf/simulated/wall/titanium,
 /area/exploration_shuttle/fuel)
-"gj" = (
-/obj/floor_decal/industrial/warning/fulltile,
-/turf/simulated/floor/tiled/monotile,
-/area/exploration_shuttle/fuel)
 "gk" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/cyan{
 	dir = 6
 	},
-/obj/machinery/meter,
+/obj/machinery/power/smes/buildable/preset/torch/shuttle{
+	RCon_tag = "Shuttle - Charon"
+	},
+/obj/structure/cable/cyan{
+	d2 = 4;
+	icon_state = "0-4"
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/exploration_shuttle/atmos)
 "gl" = (
@@ -2762,6 +2676,12 @@
 	pixel_y = 24;
 	req_access = list("ACCESS_TORCH_CREW")
 	},
+/obj/structure/cable/cyan{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/radio_beacon,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/exploration_shuttle/atmos)
 "gm" = (
@@ -2777,17 +2697,21 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
 	},
-/obj/structure/cable/cyan{
-	d1 = 2;
-	d2 = 4;
-	icon_state = "2-4"
-	},
-/obj/machinery/light{
-	dir = 1
-	},
 /obj/machinery/light_switch{
 	pixel_x = 10;
 	pixel_y = 22
+	},
+/obj/structure/cable/cyan{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/power/apc/hyper/shuttle/charon{
+	dir = 1
+	},
+/obj/structure/cable/cyan{
+	d2 = 4;
+	icon_state = "0-4"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/exploration_shuttle/atmos)
@@ -2798,16 +2722,21 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/obj/machinery/door/airlock/hatch,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
+/obj/structure/cable/cyan{
+	d1 = 6;
+	d2 = 10;
+	icon_state = "6-10"
+	},
+/obj/machinery/door/firedoor,
 /obj/structure/cable/cyan{
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/obj/machinery/door/firedoor,
+/obj/machinery/door/airlock/hatch,
 /turf/simulated/floor/tiled/steel_ridged,
 /area/exploration_shuttle/atmos)
 "gp" = (
@@ -2909,6 +2838,11 @@
 	},
 /obj/floor_decal/corner/orange{
 	dir = 6
+	},
+/obj/structure/cable/cyan{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/exploration_shuttle/airlock)
@@ -3404,6 +3338,13 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
 	},
+/obj/machinery/power/terminal{
+	dir = 1
+	},
+/obj/structure/cable/cyan{
+	d2 = 4;
+	icon_state = "0-4"
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/exploration_shuttle/atmos)
 "hY" = (
@@ -3430,6 +3371,11 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
+	},
+/obj/structure/cable/cyan{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/exploration_shuttle/atmos)
@@ -3724,13 +3670,16 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 9
 	},
-/obj/machinery/power/apc/hyper/shuttle/charon{
-	dir = 4;
-	pixel_x = 26
-	},
-/obj/structure/cable/cyan,
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel{
 	dir = 9
+	},
+/obj/structure/cable/cyan{
+	d1 = 5;
+	d2 = 8;
+	icon_state = "5-8"
+	},
+/obj/machinery/light{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/exploration_shuttle/atmos)
@@ -4023,6 +3972,11 @@
 /obj/floor_decal/industrial/warning{
 	dir = 8
 	},
+/obj/structure/cable/cyan{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/plating,
 /area/quartermaster/hangar)
 "ju" = (
@@ -4039,6 +3993,11 @@
 	dir = 4;
 	pixel_x = -21;
 	req_access = list("ACCESS_TORCH_CREW")
+	},
+/obj/structure/cable/cyan{
+	d1 = 2;
+	d2 = 9;
+	icon_state = "2-9"
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/exploration_shuttle/airlock)
@@ -4090,6 +4049,11 @@
 /obj/machinery/camera/network/fifth_deck{
 	c_tag = "Hangar - Fore Starboard";
 	dir = 4
+	},
+/obj/structure/cable/cyan{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
 	},
 /turf/simulated/floor/plating,
 /area/quartermaster/hangar)
@@ -4413,6 +4377,10 @@
 	pixel_x = 24;
 	pixel_y = -10
 	},
+/obj/machinery/power/apc/shuttle/charon{
+	dir = 4
+	},
+/obj/structure/cable/cyan,
 /turf/simulated/floor/tiled/monotile,
 /area/exploration_shuttle/airlock)
 "kf" = (
@@ -4589,6 +4557,11 @@
 	name = "Hangar Exit Door Control";
 	pixel_x = -24;
 	req_access = newlist()
+	},
+/obj/structure/cable/cyan{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
 	},
 /turf/simulated/floor/plating,
 /area/quartermaster/hangar)
@@ -4807,6 +4780,11 @@
 /obj/catwalk_plated,
 /obj/machinery/light/spot{
 	dir = 8
+	},
+/obj/structure/cable/cyan{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
 	},
 /turf/simulated/floor/plating,
 /area/quartermaster/hangar)
@@ -5372,6 +5350,7 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/cyan{
 	dir = 8
 	},
+/obj/machinery/meter,
 /turf/simulated/floor/tiled/techfloor,
 /area/exploration_shuttle/atmos)
 "mp" = (
@@ -5525,11 +5504,6 @@
 	icon_state = "1-4"
 	},
 /obj/machinery/tele_beacon,
-/obj/structure/cable/cyan{
-	d1 = 2;
-	d2 = 4;
-	icon_state = "2-4"
-	},
 /turf/simulated/floor/plating,
 /area/quartermaster/hangar)
 "mF" = (
@@ -6231,6 +6205,11 @@
 	id_tag = "charon_cargo_inner";
 	name = "Charon Cargo Bay"
 	},
+/obj/structure/cable/cyan{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/exploration_shuttle/airlock)
 "nU" = (
@@ -6710,6 +6689,11 @@
 /obj/machinery/camera/network/fifth_deck{
 	c_tag = "Hangar - Fore Port";
 	dir = 4
+	},
+/obj/structure/cable/cyan{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
 	},
 /turf/simulated/floor/plating,
 /area/quartermaster/hangar)
@@ -8086,6 +8070,7 @@
 	icon_state = "2-8"
 	},
 /obj/structure/catwalk,
+/obj/structure/cable/black,
 /turf/simulated/floor/plating,
 /area/maintenance/fifthdeck/fore)
 "rD" = (
@@ -9022,6 +9007,11 @@
 /obj/machinery/rotating_alarm/security_alarm{
 	dir = 4
 	},
+/obj/structure/cable/cyan{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/plating,
 /area/quartermaster/hangar)
 "tQ" = (
@@ -9928,6 +9918,11 @@
 	id_tag = "charon_cargo_sensor";
 	pixel_x = -23
 	},
+/obj/structure/cable/cyan{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/exploration_shuttle/airlock)
 "wj" = (
@@ -10318,6 +10313,11 @@
 	},
 /obj/structure/handrail{
 	dir = 4
+	},
+/obj/structure/cable/cyan{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/exploration_shuttle/airlock)
@@ -10848,6 +10848,11 @@
 /obj/machinery/alarm{
 	dir = 4;
 	pixel_x = -32
+	},
+/obj/structure/cable/cyan{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
 	},
 /turf/simulated/floor/plating,
 /area/quartermaster/hangar)
@@ -13304,6 +13309,11 @@
 /obj/structure/closet/hydrant{
 	pixel_x = -32
 	},
+/obj/structure/cable/cyan{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/plating,
 /area/quartermaster/hangar)
 "Jo" = (
@@ -15736,6 +15746,11 @@
 	d2 = 4;
 	icon_state = "1-4"
 	},
+/obj/structure/cable/cyan{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/plating,
 /area/quartermaster/hangar)
 "Tc" = (
@@ -17017,11 +17032,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 8
-	},
-/obj/structure/cable/cyan{
-	d1 = 1;
-	d2 = 8;
-	icon_state = "1-8"
 	},
 /turf/simulated/floor/plating,
 /area/quartermaster/hangar)
@@ -32900,30 +32910,30 @@ lm
 lA
 lY
 mc
-jt
+fQ
 jt
 jB
-aX
+en
 kU
-aX
+en
 Jn
-aX
+en
 tO
 zf
-aX
-aX
-aX
-aX
+en
+en
+en
+en
 kx
 ev
-aX
-aX
-aX
-aX
+en
+en
+en
+en
 kU
-aX
-aX
-aX
+en
+en
+en
 oM
 lQ
 lM
@@ -33102,7 +33112,7 @@ CR
 zv
 lY
 eM
-aX
+ih
 cy
 Ho
 eU
@@ -33126,7 +33136,7 @@ Ho
 Ho
 Ho
 hT
-aX
+ih
 lV
 lS
 pF
@@ -33304,7 +33314,7 @@ Rz
 aQ
 lZ
 EC
-aX
+ih
 ee
 bi
 bi
@@ -33328,7 +33338,7 @@ np
 np
 np
 fS
-aX
+ih
 UH
 lW
 pF
@@ -33530,7 +33540,7 @@ sL
 xu
 xW
 fS
-aX
+ih
 UH
 kD
 lS
@@ -33732,7 +33742,7 @@ tw
 xw
 xW
 fS
-aX
+ih
 UH
 kD
 pF
@@ -33934,7 +33944,7 @@ uN
 np
 np
 fS
-aX
+ih
 lX
 pF
 lT
@@ -34136,7 +34146,7 @@ vs
 np
 ym
 fS
-aX
+ih
 lR
 lN
 lF
@@ -34338,7 +34348,7 @@ np
 np
 yp
 fS
-aX
+ih
 gO
 gO
 gO
@@ -34538,9 +34548,9 @@ jv
 nT
 wh
 xz
-yv
-fS
-aX
+eY
+eE
+fo
 jR
 jT
 jR
@@ -34929,13 +34939,13 @@ ca
 aP
 cI
 dd
-dm
+dD
 dD
 ea
 eh
-eE
-fo
-eE
+ez
+ez
+ez
 gi
 gz
 gi
@@ -35130,13 +35140,13 @@ bB
 cb
 aP
 cJ
-de
-dv
-dJ
-eb
-eh
+df
+dm
 eF
-fp
+eF
+fr
+eF
+eF
 fO
 gi
 hd
@@ -35332,13 +35342,13 @@ bC
 cc
 aP
 cK
-de
+df
 dv
+ed
+ed
 dJ
 ed
-eh
-eK
-fq
+ed
 fP
 gi
 he
@@ -35535,13 +35545,13 @@ cl
 aP
 cL
 df
-dw
-dK
-eg
-eh
-eQ
-fr
-fQ
+dv
+ed
+ed
+dJ
+ed
+ed
+fP
 gi
 hs
 le
@@ -35733,16 +35743,16 @@ ee
 bi
 aP
 bF
-bF
+dK
 aP
 cM
-cM
-cM
+de
+dw
 dL
-eh
-eh
-eX
 fu
+fp
+dL
+dL
 eX
 gi
 gi
@@ -35935,18 +35945,18 @@ ee
 bi
 bi
 bi
-bi
+eK
 Fe
 cN
 cN
 cN
 dT
-ei
-en
-eY
+eh
+eh
+cN
 fx
-eY
-gj
+cN
+gi
 IS
 gi
 gi
@@ -36146,7 +36156,7 @@ eT
 eT
 eT
 eT
-fy
+eT
 eT
 eT
 eT
